@@ -6,6 +6,8 @@ GlucoGuide is a personal diabetes-management organizer for adults who want one p
 
 **Source repository:** [github.com/ashnasiddiqui1/glucoguide](https://github.com/ashnasiddiqui1/glucoguide)
 
+**Live application:** [glucoguide-aldx.onrender.com](https://glucoguide-aldx.onrender.com/)
+
 > **Medical safety:** GlucoGuide does not diagnose conditions, recommend medication or insulin changes, or claim that a meal or activity caused a glucose result. For severe symptoms or a suspected emergency, seek emergency care immediately.
 
 ## Problem statement
