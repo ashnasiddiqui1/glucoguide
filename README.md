@@ -114,12 +114,6 @@ Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md) to deploy it and then paste the publi
 - **GitHub repository:** _Not published yet — add verified public URL_
 - **Demo video:** _Not recorded yet — add verified public URL_
 
-## Submission materials
-
-- [Submission checklist](docs/SUBMISSION-CHECKLIST.md)
-- [Architecture documentation](docs/ARCHITECTURE.md)
-- [Deployment guide](docs/DEPLOYMENT.md)
-- [3–5 minute demo script](docs/DEMO-SCRIPT.md)
 
 ## Originality and AI use
 
