@@ -4,6 +4,8 @@
 
 GlucoGuide is a personal diabetes-management organizer for adults who want one private place to record glucose readings, user-entered medication schedules, meals, activities, and a downloadable glucose summary. It is a tracking and organizational aid—not a diagnostic, emergency, or treatment service.
 
+**Source repository:** [github.com/ashnasiddiqui1/glucoguide](https://github.com/ashnasiddiqui1/glucoguide)
+
 > **Medical safety:** GlucoGuide does not diagnose conditions, recommend medication or insulin changes, or claim that a meal or activity caused a glucose result. For severe symptoms or a suspected emergency, seek emergency care immediately.
 
 ## Problem statement
@@ -106,14 +108,9 @@ The test suite covers account registration/login/logout, duplicate-registration 
 
 ## Deployment
 
-The project supports a single Node service: Express serves the built React application and API together. It also includes a multi-stage [Dockerfile](Dockerfile). A public deployment still needs a service with a **persistent disk or volume** assigned to `DATA_FILE`, a strong secret, and a public health check at `/api/health`.
+The production build runs as a single Node.js web service: Express serves the compiled React client and REST API from the same origin. The included [Dockerfile](Dockerfile) supports container deployment. Persistent application records are stored at the configured `DATA_FILE` path, which must be backed by a persistent volume in production. The service exposes `/api/health` for monitoring.
 
-Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md) to deploy it and then paste the public URL here before submission:
-
-- **Live application:** _Not deployed yet — add verified public URL_
-- **GitHub repository:** _Not published yet — add verified public URL_
-- **Demo video:** _Not recorded yet — add verified public URL_
-
+Detailed deployment configuration is documented in [DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Originality and AI use
 

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: glucoguide
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: glucoguide-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_FILE
+        value: /var/data/glucoguide.json
+      - key: SESSION_SECRET
+        generateValue: true

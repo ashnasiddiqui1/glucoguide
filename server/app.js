@@ -28,7 +28,8 @@ const wrap = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).cat
 export function createApp(store, { sessionSecret = process.env.SESSION_SECRET || 'development-only-change-me', staticDir = null } = {}) {
   const app = express();
   app.disable('x-powered-by'); app.use(helmet({ crossOriginResourcePolicy: false }));
-  app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173', credentials: true }));
+  const clientOrigin = process.env.CLIENT_ORIGIN;
+  app.use(cors(clientOrigin ? { origin: clientOrigin, credentials: true } : { origin: false }));
   app.use(express.json({ limit: '100kb' })); app.use(cookieParser());
   app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 100, standardHeaders: true, legacyHeaders: false }));
   app.use(async (req, _res, next) => { const id = verify(req.cookies[cookieName], sessionSecret); req.user = id ? await store.find('users', (u) => u.id === id) : null; next(); });
