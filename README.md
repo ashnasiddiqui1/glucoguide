@@ -1,5 +1,7 @@
 # GlucoGuide
 
+demo video link https://drive.google.com/file/d/1FKdcXOn9y5X0U2kAylCHRjEeyvywgtb4/view?usp=sharing
+
 **Track your readings. Understand your patterns. Stay prepared.**
 
 GlucoGuide is a personal diabetes-management organizer for adults who want one private place to record glucose readings, user-entered medication schedules, meals, activities, and a downloadable glucose summary. It is a tracking and organizational aid—not a diagnostic, emergency, or treatment service.
